@@ -70,7 +70,7 @@ footer{position:relative;z-index:1;text-align:center;padding:26px;font-size:.8re
 html{scrollbar-gutter:stable}
 #projects{display:block;padding:0;min-height:170vh}
 #projects:before{background:linear-gradient(90deg,rgba(5,8,18,.7),rgba(5,8,18,0) 42%)}
-.stick{position:sticky;top:0;height:100vh;height:100svh;display:flex;flex-direction:column;justify-content:space-between;padding:96px clamp(20px,6vw,96px) 36px;pointer-events:none}
+.stick{position:sticky;top:0;height:100vh;height:100svh;display:flex;flex-direction:column;justify-content:space-between;padding:96px clamp(20px,6vw,96px) calc(max(72px,12vh) + env(safe-area-inset-bottom,0px));pointer-events:none}
 .stick button,.stick a{pointer-events:auto}
 .gh{font-size:.9rem;color:var(--mut);margin-bottom:12px}.gi{display:flex;flex-wrap:wrap;gap:8px 26px}
 .gi button{background:none;border:0;border-bottom:2px solid var(--gb);color:var(--ink);font:500 .95rem "DM Sans",sans-serif;padding:6px 0;cursor:pointer;transition:border-color .25s,color .25s}.gi button:hover{border-color:var(--or);color:var(--or2)}
@@ -79,20 +79,20 @@ html{scrollbar-gutter:stable}
 #info h3{font:800 clamp(1.7rem,3.4vw,2.6rem)/1.05 Syne,sans-serif;color:var(--ink);letter-spacing:-.02em;margin:8px 0 14px}#info p{color:var(--mut);margin-bottom:18px;font-size:.98rem}
 .ib{background:none;border:0;color:var(--or2);font:500 .92rem "DM Sans",sans-serif;cursor:pointer;padding:4px 0;margin-bottom:26px;align-self:flex-start}.ib:hover{color:var(--ink)}
 .inav{display:flex;align-items:center;gap:14px;margin-top:26px;font:700 .8rem var(--mono);color:var(--mut)}.inav button{width:38px;height:38px;border-radius:50%;border:1px solid var(--gb);background:var(--code);color:var(--ink);font-size:1.2rem;cursor:pointer}.inav button:hover{border-color:var(--or)}
-@media(max-aspect-ratio:1/1){#info{top:auto;width:100%;max-height:58vh;padding:26px 22px 26px;background:linear-gradient(0deg,rgba(5,8,18,.95),rgba(5,8,18,.8) 80%,rgba(5,8,18,0))}.ib{margin-bottom:10px}#info h3{font-size:1.5rem}}
-.g{translate:0 var(--py,0px)}
+@media(max-aspect-ratio:1/1){#info{top:auto;width:100%;max-height:60vh;max-height:60svh;overflow-y:auto;padding:26px 22px 26px;background:linear-gradient(0deg,rgba(5,8,18,.95),rgba(5,8,18,.8) 80%,rgba(5,8,18,0))}.ib{margin-bottom:10px}#info h3{font-size:1.5rem}}
 .tw{display:inline-block;white-space:nowrap}.tc{display:inline-block;overflow:hidden;vertical-align:top;padding-bottom:.14em;margin-bottom:-.14em}.tc.free{overflow:visible;padding:0;margin:0}.ti{display:inline-block;will-change:transform}
 .meter{height:3px;background:var(--code);border-radius:3px;margin-top:12px;overflow:hidden}.meter b{display:block;height:100%;background:var(--or);transform-origin:left;transform:scaleX(0);box-shadow:0 0 10px var(--or)}
 .ghost{position:absolute;right:2vw;top:20%;font:800 clamp(7rem,24vw,22rem)/1 Syne,sans-serif;font-style:normal;color:transparent;-webkit-text-stroke:1px rgba(255,255,255,.07);pointer-events:none;z-index:-1;white-space:nowrap}
 .tl:before{background:rgba(255,255,255,.12)}.tl-fill{position:absolute;left:0;top:6px;bottom:6px;width:2px;background:linear-gradient(var(--or),var(--or2));transform-origin:top;transform:scaleY(0);box-shadow:0 0 12px var(--or)}
 .ai:before{background:#3a4468;box-shadow:0 0 0 4px var(--code);transition:background .5s,box-shadow .5s}.ai.on:before{background:var(--or);box-shadow:0 0 0 4px var(--code),0 0 16px var(--or)}
 @media(max-width:700px){.ghost{display:none}}
-.g{rotate:0 1 0 var(--ty,0deg)}
-.lh h2{transform:skewX(calc(var(--sk,0)*1deg));transform-origin:0 100%}
 .trk{transform-origin:0 50%}
 @media(prefers-reduced-motion:no-preference){
 .hero .chip{background:linear-gradient(110deg,transparent 35%,rgba(255,138,77,.3) 50%,transparent 65%) 200% 0/250% 100% no-repeat;animation:shn 6s ease-in-out 3.5s infinite}
 @keyframes shn{0%,55%{background-position:200% 0}100%{background-position:-100% 0}}}
+.gi{gap:10px}.gi button{padding:9px 18px;border:1px solid var(--gb);border-radius:100px;background:rgba(10,15,32,.72)}
+.soft .sc:last-child:nth-child(odd){grid-column:1/-1}.int+.int{margin-top:18px}.ci p.dt{line-height:1.5}
+@media(max-width:700px){section{padding:92px 18px 72px}.g{-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px);background:rgba(10,15,32,.8)}h1{font-size:clamp(3rem,16vw,4.6rem)}.stick{padding-left:18px;padding-right:18px}.gi button{font-size:.88rem}.lab textarea{font-size:16px}}
 </style>
 </head>
 <body>
@@ -119,9 +119,9 @@ html{scrollbar-gutter:stable}
 <section id="education"><div class="w">
 <div class="lh rv"><div class="c">chr1 <i>:1–2,400</i></div><h2>Academic Background</h2><span class="trk"></span></div>
 <div class="grid">
-<div class="g ec rv"><h3>B.Tech in Biotechnology</h3><div class="mut">Lovely Professional University</div><div class="dt">Aug 2023 – Present · Punjab, India</div><span class="pill">CGPA: <span class="cnt" data-v="7.44" data-d="2">7.44</span> (Current)</span><div class="meter"><b data-v=".744"></b></div></div>
-<div class="g ec rv"><h3>Class XII (HSC)</h3><div class="mut">Jawahar Navodaya Vidyalaya, Latur</div><div class="dt">July 2022</div><span class="pill">Aggregate: <span class="cnt" data-v="85.4" data-d="1">85.4</span>%</span><div class="meter"><b data-v=".854"></b></div></div>
-<div class="g ec rv"><h3>Class X (SSC)</h3><div class="mut">Jawahar Navodaya Vidyalaya, Latur</div><div class="dt">May 2020</div><span class="pill">Aggregate: <span class="cnt" data-v="87.2" data-d="1">87.2</span>%</span><div class="meter"><b data-v=".872"></b></div></div>
+<div class="g ec rv"><h3>B.Tech in Biotechnology</h3><div class="mut">Lovely Professional University</div><div class="dt">2023 – Present · Phagwara, Punjab, India</div><span class="pill">CGPA: <span class="cnt" data-v="7.44" data-d="2">7.44</span> (Current)</span><div class="meter"><b data-v=".744"></b></div></div>
+<div class="g ec rv"><h3>Class XII (HSC)</h3><div class="mut">Jawahar Navodaya Vidyalaya, Latur</div><div class="dt">2021 – 2022</div><span class="pill">Aggregate: <span class="cnt" data-v="85.2" data-d="1">85.2</span>%</span><div class="meter"><b data-v=".852"></b></div></div>
+<div class="g ec rv"><h3>Class X (SSC)</h3><div class="mut">Jawahar Navodaya Vidyalaya, Latur</div><div class="dt">2019 – 2020</div><span class="pill">Aggregate: <span class="cnt" data-v="87.4" data-d="1">87.4</span>%</span><div class="meter"><b data-v=".874"></b></div></div>
 </div></div></section>
 
 <section id="skills"><div class="w">
@@ -131,26 +131,29 @@ html{scrollbar-gutter:stable}
 <div class="g ts rv"><b>Recombinant DNA Technology</b><small>Theory and hands-on application of rDNA techniques</small></div>
 <div class="g ts rv"><b>Lab Instrumentation</b><small>Performing rDNA experiments using specialised lab equipment</small></div>
 <div class="g ts rv"><b>Bioinformatics &amp; Data Science</b><small>Sequence analysis, BLAST, NCBI databases, Python/Biopython</small></div>
-<div class="g ts rv"><b>In Silico Drug Discovery <span class="badge">Learning</span></b><small>Computational approaches to drug target identification &amp; docking</small></div></div>
-<div class="ch rv" style="margin-top:28px">Power Skills</div><div class="soft"><div class="g sc rv">Team Work</div><div class="g sc rv">Curiosity</div><div class="g sc rv">Quick Learner</div><div class="g sc rv">Adaptability</div></div>
+<div class="g ts rv"><b>In Silico Drug Discovery <span class="badge">Learning</span></b><small>Computational approaches to drug target identification &amp; docking</small></div>
+<div class="g ts rv"><b>Wet Lab</b><small>PCR, gel electrophoresis, DNA extraction, sterile technique, ICP-OES, FESEM</small></div>
+<div class="g ts rv"><b>Dry Lab</b><small>BLAST (N/P/X), NCBI Entrez, sequence analysis, molecular visualisation (PyMOL / 3Dmol.js)</small></div>
+<div class="g ts rv"><b>Tools &amp; Programming</b><small>MS Excel, Python, Biopython, HTML</small></div></div>
+<div class="ch rv" style="margin-top:28px">Power Skills</div><div class="soft"><div class="g sc rv">Team Work</div><div class="g sc rv">Curiosity</div><div class="g sc rv">Quick Learner</div><div class="g sc rv">Adaptability</div><div class="g sc rv">Team Leadership</div><div class="g sc rv">Public Speaking</div><div class="g sc rv">Interpersonal Relations</div></div>
 </div></section>
 
 <section id="projects">
 <div class="stick">
 <div class="lh sk"><div class="c">chr3 <i>:5,201–9,800</i></div><h2>My Projects</h2><span class="trk"></span></div>
-<div class="gb sk"><p class="gh">Select a display to step inside. Esc returns to the gallery.</p><div class="gi" id="gi"><button data-i="0">BioScope</button><button data-i="1">Proximity Sensing Arduino</button><button data-i="2">More on GitHub</button></div></div>
+<div class="gb sk"><p class="gh">Select a display to step inside. Esc returns to the gallery.</p><div class="gi" id="gi"><button data-i="0">BioScope</button><button data-i="1">BioCrypt</button><button data-i="2">Nilgiris Metagenomics</button></div></div>
 </div>
-<article class="pj" data-i="0"><h3 class="pt">BioScope Desktop Bioinformatics Tool</h3><div class="pd">December 2025</div>
-<p class="pp">A Python/Tkinter application integrating Biopython and NCBI services for sequence retrieval, BLAST (N/P/X), nucleotide/protein composition, motif/ORF finding, physicochemical calculations (pI, MW, GRAVY, instability index), hydrophobicity plots, secondary structure analysis, and embedded 3Dmol protein visualization. Designed to support hands-on bioinformatics education and rapid sequence exploration.</p>
-<div class="tags"><span class="tag">Python</span><span class="tag">Tkinter</span><span class="tag">Biopython</span><span class="tag">NCBI Entrez</span><span class="tag">3Dmol</span><span class="tag">BLAST</span></div>
-<div class="pl"><a href="https://bioscope-app.streamlit.app" class="ghl" target="_blank" rel="noopener noreferrer">↗ Live App</a><a href="#lab" class="ghl">Try it below</a></div></article>
-<article class="pj" data-i="1"><h3 class="pt">Proximity Sensing Arduino Project</h3><div class="pd">September 2023</div>
-<p class="pp">Developed an Arduino-based proximity sensor as a team project, integrating microprocessor technology to optimize sensing performance. Gained practical skills in Arduino programming, hardware integration, cross-functional collaboration, and technical documentation/reporting.</p>
-<div class="tags"><span class="tag">Arduino</span><span class="tag">Embedded Systems</span><span class="tag">Microprocessors</span><span class="tag">Sensor Tech</span></div></article>
-<article class="pj" data-i="2"><h3 class="pt">More on GitHub</h3><div class="pd"></div>
-<p class="pp">Other experiments, scripts and notebooks live here.</p>
-<div class="pl"><a href="https://github.com/pranav-shirure22" class="ghl" target="_blank" rel="noopener noreferrer">↗ pranav-shirure22</a></div></article>
-</section>
+<article class="pj" data-i="0"><h3 class="pt">BioScope Desktop Bioinformatics Tool</h3><div class="pd">Aug 2025 – Jun 2026</div>
+<p class="pp">A Python/Tkinter application using Biopython and NCBI Entrez for BLAST (BLASTn/p/x), sequence retrieval, ORF and motif detection, and nucleotide/protein analysis. Includes physicochemical analysis (pI, molecular weight, GRAVY, instability index), composition profiling and visualisation. Registered software copyright, May 2026 (Certificate No. SW2026022811), co-authored with Dr. Piyush Kumar Yadav.</p>
+<div class="tags"><span class="tag">Python</span><span class="tag">Tkinter</span><span class="tag">Biopython</span><span class="tag">NCBI Entrez</span><span class="tag">BLAST</span></div>
+<div class="pl"><a href="https://bioscope-app.streamlit.app/" class="ghl" target="_blank" rel="noopener noreferrer">↗ Live App</a><a href="#lab" class="ghl">Try it below</a></div></article>
+<article class="pj" data-i="1"><h3 class="pt">BioCrypt</h3><div class="pd">Dec 2025 – Jan 2026</div>
+<p class="pp">A Python/Tkinter tool that encodes and decodes text into biologically valid DNA/RNA codon sequences using the genetic code and codon mapping. Its GUI demonstrates DNA as a potential data-storage medium, combining programming with molecular biology.</p>
+<div class="tags"><span class="tag">Python</span><span class="tag">Tkinter</span><span class="tag">Genetic Code</span><span class="tag">DNA Data Storage</span></div></article>
+<article class="pj" data-i="2"><h3 class="pt">Metagenomics Study of Nilgiris Soil</h3><div class="pd">Ongoing research project</div>
+<p class="pp">A metagenomics study on soil samples collected from the Nilgiris. Building hands-on laboratory experience in DNA isolation, PCR, gel electrophoresis, chemical calculations and wet-lab procedure.</p>
+<div class="tags"><span class="tag">Metagenomics</span><span class="tag">DNA Isolation</span><span class="tag">PCR</span><span class="tag">Gel Electrophoresis</span></div></article>
+
 
 <section id="lab"><div class="w" style="max-width:760px">
 <div class="lh rv"><div class="c">chr4 <i>:9,801–14,000 · Try some features of my tool BIOScope</i></div><h2>BioScopeLite Lab</h2><span class="trk"></span></div>
@@ -164,7 +167,9 @@ html{scrollbar-gutter:stable}
 
 <section id="experience"><div class="w">
 <div class="lh rv"><div class="c">chr5 <i>:14,001–17,500</i></div><h2>Industry Exposure</h2><span class="trk"></span></div>
-<div class="g int rv"><h3>Quality Assurance / Quality Control Intern</h3><div class="org">LORDS Life Sciences and Research Laboratory Pvt. Ltd.</div><div class="dt">July 2025</div>
+<div class="g int rv"><h3>Summer Trainee</h3><div class="org">Central Instrumentation Facility, Lovely Professional University</div><div class="dt">Jun – Jul 2026 (8 June – 4 July) · Phagwara, Punjab</div>
+<ul><li>Completed the Summer Training Programme organised by the Central Instrumentation Facility, Research and Development Cell, LPU.</li><li>Gained exposure to advanced scientific instrumentation from Bruker, Malvern Panalytical, Shimadzu, PerkinElmer, Metrohm and JEOL.</li></ul></div>
+<div class="g int rv"><h3>Quality Assurance / Quality Control Intern</h3><div class="org">LORDS Life Sciences and Research Laboratory Pvt. Ltd.</div><div class="dt">Jun – Jul 2025 · Chhatrapati Sambhaji Nagar, Maharashtra</div>
 <ul><li>Assisted in QA/QC activities including basic dissolution testing and quality checks of pharmaceutical formulations.</li><li>Gained exposure to analytical techniques including HPLC and GC in a regulated lab environment.</li><li>Practiced and understood Good Laboratory Practices (GLPs) throughout the internship period.</li></ul></div>
 <h3 class="subh rv">Beyond the Curriculum</h3>
 <div class="tl"><span class="tl-fill"></span>
@@ -172,14 +177,20 @@ html{scrollbar-gutter:stable}
 <div class="ai rv"><div class="ad">Sept 2025</div><div class="at">Volunteered to organize the SSG-BRIDGE Sustainable City International Symposium</div><div class="as">UK–India Collaboration, LPU</div></div>
 <div class="ai rv"><div class="ad">Aug 2025</div><div class="at">Student Campus Connect Committee Coordinator</div><div class="as">LPU School of Bioengineering &amp; Biosciences (SBBS)</div></div>
 <div class="ai rv"><div class="ad">Feb 2025</div><div class="at">Presented poster on CRISPR Technology</div><div class="as">Lovely Professional University</div></div>
+<div class="ai rv"><div class="ad">Jun – Jul 2024</div><div class="at">Community Development Project: led environmental-awareness outreach, tree plantation and sapling distribution</div><div class="as">34+ volunteer hours</div></div>
 <div class="ai rv"><div class="ad">May 2024 – Present</div><div class="at">Volunteer at LOKSAHBHAG BAHUDDESHIY SANSTHA (NGO)</div><div class="as">Shirur Anantpal, Maharashtra</div></div>
+<div class="ai rv"><div class="ad">Sept 2023</div><div class="at">Built an Arduino-based proximity sensor</div><div class="as">Team project · Arduino, embedded systems</div></div>
 <div class="ai rv"><div class="ad">April 2022</div><div class="at">Performed a monologue at Chhatrapati Shivaji Maharaj Chowk, Latur</div><div class="as">Public awareness campaign on responsible water usage</div></div></div>
 </div></section>
 
 <section id="credentials"><div class="w" style="max-width:760px">
 <div class="lh rv"><div class="c">chr6 <i>:17,501–21,000</i></div><h2>Credentials &amp; Training Certificates</h2><span class="trk"></span></div>
 <div class="grid two">
-<div class="g ci rv"><h3>Copyright Certificate for BioScope</h3><p class="mut">Copyright Office Govern Of India</p><h3 style="font-size:.92rem;margin-top:6px">Application Number: SW-5836/2026-CO</h3><p class="dt">9 February 2026</p><button class="btn cb" data-s="copyright.jpeg" data-t="Copyright Certificate for BioScope">View Certificate</button></div>
+<div class="g ci rv"><h3>Copyright Certificate for BioScope</h3><p class="mut">Copyright Office, Government of India</p><p class="dt">Certificate No. SW2026022811 · Application No. SW-5836/2026-CO<br>Filed Feb 2026 · Registered May 2026<br>Co-authored with Dr. Piyush Kumar Yadav · Owned by LPU</p><button class="btn cb" data-s="copyright.jpeg" data-t="Copyright Certificate for BioScope">View Certificate</button></div>
+<div class="g ci rv"><h3>Summer Training Programme</h3><p class="mut">Central Instrumentation Facility, Lovely Professional University</p><p class="dt">8 June – 4 July 2026</p><button class="btn cb" data-s="cif.jpeg" data-t="Summer Training Programme">View Certificate</button></div>
+<div class="g ci rv"><h3>Certificate Course in Waste Management</h3><p class="mut">Reliance Foundation Skilling Academy via Skill India Digital</p><p class="dt">Jun – Jul 2026</p><button class="btn cb" data-s="waste.jpeg" data-t="Certificate Course in Waste Management">View Certificate</button></div>
+<div class="g ci rv"><h3>3rd National Workshop on FESEM</h3><p class="mut">Central Instrumentation Facility, Lovely Professional University</p><p class="dt">April 2026 • 3 days</p><button class="btn cb" data-s="fesem.jpeg" data-t="3rd National Workshop on FESEM">View Certificate</button></div>
+<div class="g ci rv"><h3>Good Manufacturing Practices (GMP)</h3><p class="mut">Pharmuni</p><p class="dt">Dec 2025 – Jan 2026</p><button class="btn cb" data-s="gmp.jpeg" data-t="Good Manufacturing Practices (GMP)">View Certificate</button></div>
 <div class="g ci rv"><h3>Certificate for 3 days workshop on ICP-OES</h3><p class="mut">Central Instrumentation Facility, Lovely Professional University</p><p class="dt">December 2025</p><button class="btn cb" data-s="icpoes.jpeg" data-t="ICP-OES Workshop Certificate">View Certificate</button></div>
 <div class="g ci rv"><h3>Vaccine Technology – 2 Day Offline Workshop</h3><p class="mut">Ethical Edufabrica Pvt. Ltd. × Advitiya, IIT Ropar</p><p class="dt">16–17 February 2024 • IIT Ropar</p><button class="btn cb" data-s="vt.jpeg" data-t="Vaccine Technology Certificate">View Certificate</button></div>
 <div class="g ci rv"><h3>Public Speaking – Certificate of Merit</h3><p class="mut">Centre for Professional Enhancement, Lovely Professional University</p><p class="dt">Oct–Nov 2023 • Grade: A</p><button class="btn cb" data-s="ps.png" data-t="Public Speaking Certificate">View Certificate</button></div>
@@ -207,7 +218,7 @@ html{scrollbar-gutter:stable}
 (function(){
 var $=function(s){return document.querySelector(s)},$$=function(s){return[].slice.call(document.querySelectorAll(s))};
 var RM=matchMedia('(prefers-reduced-motion: reduce)').matches,rmf=RM?.25:1;
-gsap.registerPlugin(ScrollTrigger);
+gsap.registerPlugin(ScrollTrigger);ScrollTrigger.config({ignoreMobileResize:true});
 
 /* ================= LAB (ported from the original site) ================= */
 (function(){
@@ -279,11 +290,8 @@ function scrTo(el,fin,dur){if(RM){el.textContent=fin;return}var o={p:0},old=scT.
 function ph(fin){return fin.replace(/[0-9]/g,function(){return Math.random()*10|0}).replace(/[A-Za-z]/g,function(){return'ATGC'[Math.random()*4|0]})}
 /* ================= DOM PANELS: spatial entrance / exit ================= */
 if(!RM){
-  $$('.rv').forEach(function(el,i){
-    var zs=[-900,-450,-1300,-700][i%4],ry=(i%2?1:-1)*(22+(i%3)*8);
-    gsap.fromTo(el,{z:zs,rotateY:ry,rotateX:12,y:100,opacity:0,transformPerspective:900},{z:0,rotateY:0,rotateX:0,y:0,opacity:1,ease:'power3.out',scrollTrigger:{trigger:el,start:'top 97%',end:'top 55%',scrub:.7}});
-    gsap.fromTo(el,{z:0,rotateY:0,rotateX:0,y:0,opacity:1},{z:350,rotateY:-ry*.8,rotateX:-8,y:-140,opacity:0,ease:'power2.in',immediateRender:false,scrollTrigger:{trigger:el,start:'bottom 30%',end:'bottom -8%',scrub:.7}});
-  });
+
+  $$('.rv').forEach(function(el){gsap.from(el,{y:48,opacity:0,duration:.9,ease:'power3.out',clearProps:'transform,opacity',scrollTrigger:{trigger:el,start:'top 92%',once:true}})});
   /* --- animated typography --- */
   function split(el,free){el.setAttribute('aria-label',el.textContent);var out=[];
     (function walk(n){[].slice.call(n.childNodes).forEach(function(c){if(c.nodeType===3){var f=document.createDocumentFragment();
@@ -292,11 +300,10 @@ if(!RM){
         w.split('').forEach(function(ch){var a=document.createElement('span'),b=document.createElement('span');a.className='tc'+(free?' free':'');b.className='ti';b.textContent=ch;a.appendChild(b);ws.appendChild(a);out.push(b)});f.appendChild(ws)});
       c.parentNode.replaceChild(f,c)}else if(c.nodeType===1)walk(c)})})(el);return out}
   var hch=split($('h1'),true);                                        /* hero name assembles out of depth, then scatters as the camera pulls away */
-  gsap.from(hch,{z:-900,rotateX:-100,y:90,opacity:0,transformPerspective:900,stagger:.045,duration:1.6,ease:'power4.out',delay:.35});
-  gsap.fromTo(hch,{z:0,x:0,y:0,rotateX:0,opacity:1},{z:function(i){return -300-(i%5)*140},x:function(i){return (i-5.5)*38},y:function(i){return -80-(i%3)*60},rotateX:function(i){return i%2?70:-70},opacity:0,ease:'power2.in',immediateRender:false,stagger:{each:.02,from:'center'},scrollTrigger:{trigger:'#home',start:'top -5%',end:'bottom 25%',scrub:.7}});
+  gsap.from(hch,{z:-300,rotateX:-60,y:60,opacity:0,transformPerspective:900,stagger:.035,duration:1.3,ease:'power4.out',delay:.35});
   $$('.lh h2').forEach(function(h){var ch=split(h);                    /* section titles rise out of a mask, scrubbed by scroll */
-    gsap.fromTo(ch,{yPercent:115,rotateX:-80,transformOrigin:'50% 100%',transformPerspective:600},{yPercent:0,rotateX:0,ease:'power3.out',stagger:.04,scrollTrigger:{trigger:h,start:'top 92%',end:'top 52%',scrub:.6}})});
-  $$('.trk').forEach(function(t){gsap.fromTo(t,{scaleX:0},{scaleX:1,ease:'none',scrollTrigger:{trigger:t,start:'top 94%',end:'top 62%',scrub:.6}})});   /* each locus rule is drawn by the scroll */
+    gsap.fromTo(ch,{yPercent:115,rotateX:-80,transformOrigin:'50% 100%',transformPerspective:600},{yPercent:0,rotateX:0,ease:'power3.out',stagger:.025,duration:.8,scrollTrigger:{trigger:h,start:'top 90%',once:true}})});
+  $$('.trk').forEach(function(t){gsap.fromTo(t,{scaleX:0},{scaleX:1,ease:'none',duration:.9,scrollTrigger:{trigger:t,start:'top 92%',once:true}})});   /* each locus rule is drawn by the scroll */
   $$('.c i').forEach(function(el){var fin=el.textContent;el.textContent=ph(fin);                 /* chromosome coordinates decode when a locus arrives */
     ScrollTrigger.create({trigger:el,start:'top 92%',onEnter:function(){scrTo(el,fin,1.1)},onLeaveBack:function(){el.textContent=ph(fin)}})});
   var chip=$('.chip'),cf=chip.textContent;chip.textContent=ph(cf);gsap.delayedCall(.6,function(){scrTo(chip,cf,1.3)});
@@ -309,14 +316,13 @@ if(!RM){
   $$('.ai').forEach(function(a){ScrollTrigger.create({trigger:a,start:'top 68%',onEnter:function(){a.classList.add('on')},onLeaveBack:function(){a.classList.remove('on')}})});
   /* --- layered parallax: oversized outlined locus labels and floating panels move at different depths --- */
   [['education',1,26],['skills',2,38],['lab',4,30],['experience',5,42],['credentials',6,32],['contact',7,24]].forEach(function(d){var sec=$('#'+d[0]),g=document.createElement('i');g.className='ghost';g.setAttribute('aria-hidden','true');g.textContent='chr'+d[1];sec.appendChild(g);
-    gsap.fromTo(g,{yPercent:d[2],x:70},{yPercent:-d[2],x:-70,ease:'none',scrollTrigger:{trigger:sec,start:'top bottom',end:'bottom top',scrub:true}})});
-  $$('.g').forEach(function(el,i){if(el.classList.contains('lab'))return;var a=[16,30,46][i%3]*(i%2?1:-1);
-    gsap.fromTo(el,{'--py':a+'px','--ty':(a>0?6:-6)+'deg'},{'--py':-a+'px','--ty':(a>0?-6:6)+'deg',ease:'none',scrollTrigger:{trigger:el,start:'top bottom',end:'bottom top',scrub:true}})});
+    gsap.fromTo(g,{yPercent:d[2]*.35,x:30},{yPercent:-d[2]*.35,x:-30,ease:'none',scrollTrigger:{trigger:sec,start:'top bottom',end:'bottom top',scrub:true}})});
   gsap.fromTo('.lh.sk',{z:-600,x:-60,opacity:0,transformPerspective:900},{z:0,x:0,opacity:1,ease:'power3.out',scrollTrigger:{trigger:'#projects',start:'top 70%',end:'top 20%',scrub:.7}});
   gsap.fromTo('.gb.sk',{y:70,opacity:0},{y:0,opacity:1,ease:'power3.out',scrollTrigger:{trigger:'#projects',start:'top 50%',end:'top 10%',scrub:.7}});
   gsap.fromTo('.sk',{z:0,opacity:1,transformPerspective:900},{z:-400,y:-40,opacity:0,ease:'power2.in',immediateRender:false,scrollTrigger:{trigger:'#projects',start:'bottom 85%',end:'bottom 45%',scrub:.7}});
   gsap.from('.hr',{z:-700,rotateY:-24,y:60,opacity:0,transformPerspective:900,stagger:.12,duration:1.8,ease:'power3.out',delay:.3,clearProps:'transform,opacity'});
-  gsap.fromTo('.hr',{z:0,y:0,rotateY:0,opacity:1,transformPerspective:900},{z:-600,y:-60,rotateY:22,opacity:0,stagger:.04,ease:'power2.in',immediateRender:false,scrollTrigger:{trigger:'#home',start:'top -5%',end:'bottom 25%',scrub:.7}});
+
+  gsap.to('.hero .w',{opacity:0,y:-40,ease:'none',scrollTrigger:{trigger:'#home',start:'top -10%',end:'bottom 30%',scrub:true}});
 }else{$$('.meter b').forEach(function(b){b.style.transform='scaleX('+b.dataset.v+')'});$$('.ai').forEach(function(a){a.classList.add('on')});var tf=$('.tl-fill');if(tf)tf.style.transform='scaleY(1)'}
 
 /* ================= 3D WORLD ================= */
@@ -376,7 +382,7 @@ function lay(i,k){
 
 /* --- project gallery: floating display panels (content is read from the .pj articles) --- */
 var PJ=$$('.pj').map(function(a){return{title:a.querySelector('.pt').textContent,date:a.querySelector('.pd').textContent,desc:a.querySelector('.pp').textContent,tags:(a.querySelector('.tags')||{innerHTML:''}).innerHTML,links:(a.querySelector('.pl')||{innerHTML:''}).innerHTML}});
-var SHOTS=['screenshots/bioscope.png','screenshots/arduino.png','screenshots/github.png'];  /* optional: drop real screenshots here */
+var SHOTS=['screenshots/bioscope.png','screenshots/biocrypt.png','screenshots/metagenomics.png'];  /* optional: drop real screenshots here */
 var PF=[[1.2,.7,-32.2,.28],[5,-.3,-34,0],[8.8,.7,-32.2,-.28]],PE=[[-13,2,-30],[15,-1,-33],[18,3,-30]],ps=[];
 function wrapT(x,t,mw){var w=t.split(' '),l='',o=[];w.forEach(function(q){var n=l?l+' '+q:q;if(x.measureText(n).width>mw&&l){o.push(l);l=q}else l=n});o.push(l);return o}
 var ART=[
@@ -385,7 +391,8 @@ var ART=[
    x.fillStyle=d>0?'#cfd8ea':'#46507a';x.beginPath();x.arc(u,y1,7+d*3,0,6.3);x.fill();x.fillStyle=d>0?'#46507a':'#cfd8ea';x.beginPath();x.arc(u,y2,7-d*3,0,6.3);x.fill()}
    x.font='600 20px monospace';x.fillStyle='rgba(255,255,255,.08)';var r=R(5),L='ATGC';for(var j=0;j<9;j++){var q='';for(var z=0;z<30;z++)q+=L[r()*4|0];x.fillText(q,40,50+j*46)}},
  function(x){x.translate(210,30);x.scale(3.6,3.6);x.lineCap='round';x.lineWidth=3;x.strokeStyle='#ff8a4d';x.stroke(new Path2D('M38 40h94a8 8 0 0 1 8 8v54a8 8 0 0 1-8 8H38a8 8 0 0 1-8-8V48a8 8 0 0 1 8-8z'));x.fillStyle='#ff8a4d';x.beginPath();x.arc(160,75,9,0,6.3);x.fill();x.stroke(new Path2D('M174 55a28 28 0 0 1 0 40M184 45a42 42 0 0 1 0 60'));x.globalAlpha=.5;x.strokeStyle='#cfd8ea';x.stroke(new Path2D('M50 60h40M50 75h60M50 90h30'))},
- function(x){x.font='700 34px monospace';x.fillStyle='#ff8a4d';x.fillText('> pranav-shirure22',60,130);x.fillStyle='rgba(255,255,255,.45)';x.font='500 26px monospace';['experiments','scripts','notebooks'].forEach(function(q,i){x.fillText('  '+q,60,190+i*44)});var r=R(9);for(var i=0;i<14;i++)for(var j=0;j<6;j++){x.fillStyle='rgba(255,138,77,'+(r()*.5)+')';x.fillRect(640+i*26,90+j*26,20,20)}}];
+ function(x){x.font='700 34px monospace';x.fillStyle='#ff8a4d';x.fillText('> biocrypt',60,130);x.fillStyle='rgba(255,255,255,.45)';x.font='500 26px monospace';['encode','decode','codons'].forEach(function(q,i){x.fillText('  '+q,60,190+i*44)});var r=R(9);for(var i=0;i<14;i++)for(var j=0;j<6;j++){x.fillStyle='rgba(255,138,77,'+(r()*.5)+')';x.fillRect(640+i*26,90+j*26,20,20)}}];
+var t0=ART[2];ART[2]=ART[0];ART[1]=t0;
 function face(i){
   var P=ps[i],img=P.img,x=P.cv.getContext('2d'),W=1024,H=640,g=x.createLinearGradient(0,0,W,H);
   g.addColorStop(0,'#0b1226');g.addColorStop(1,['#1d2570','#18213f','#101626'][i]);x.fillStyle=g;x.fillRect(0,0,W,H);
@@ -502,7 +509,7 @@ var hold=0;function meas(){hold=innerHeight*.7;offs=secs.map(function(s){return 
 function tgt(y){var n=offs.length-1;if(y>=offs[n])return n;for(var i=0;i<n;i++){if(y<offs[i+1]){var st=offs[i]+(i==3?hold:0);return i+Math.max(0,y-st)/(offs[i+1]-st)}}return n}
 function apply(){tl.time(prox.f);var r=Math.round(prox.f);if(r!==cur){cur=r;if(!RM)gsap.fromTo(pulse,{v:0},{v:1,duration:1.8,ease:'power2.out',overwrite:true});scrTo(locEl,'chr'+r+':'+names[r],.5);mm.forEach(function(a,i){a.classList.toggle('on',i===r)})}}
 ScrollTrigger.addEventListener('refreshInit',meas);
-ScrollTrigger.create({start:0,end:'max',onUpdate:function(){gsap.to(prox,{f:tgt(scrollY),duration:RM?.2:1.1,ease:'power2.out',overwrite:true,onUpdate:apply})}});
+ScrollTrigger.create({start:0,end:'max',onUpdate:function(){gsap.to(prox,{f:tgt(scrollY),duration:RM?.2:1.5,ease:'power2.out',overwrite:true,onUpdate:apply})}});
 meas();apply();addEventListener('load',function(){ScrollTrigger.refresh();var f=tgt(scrollY);prox.f=f;apply()});
 gsap.to(intro,{v:1,duration:2.4,ease:'power3.out',delay:.2});
 
@@ -551,7 +558,7 @@ addEventListener('pointermove',function(e){if(e.pointerType==='touch')return;var
 var mx=0,my=0,sx=0,sy=0,tmp=new THREE.Vector3(),clock=new THREE.Clock(),lastY=scrollY,sv=0;
 addEventListener('pointermove',function(e){mx=e.clientX/innerWidth*2-1;my=e.clientY/innerHeight*2-1},{passive:true});
 function resize(){renderer.setSize(innerWidth,innerHeight,false);cam.aspect=innerWidth/innerHeight;cam.updateProjectionMatrix()}
-addEventListener('resize',resize);resize();
+var rw=innerWidth,rh=innerHeight;addEventListener('resize',function(){if(innerWidth!==rw||Math.abs(innerHeight-rh)>160){rw=innerWidth;rh=innerHeight;resize()}});resize();
 document.addEventListener('visibilitychange',function(){document.hidden?clock.stop():clock.start()});
 (function loop(){
   requestAnimationFrame(loop);
@@ -567,8 +574,8 @@ document.addEventListener('visibilitychange',function(){document.hidden?clock.st
     var tg=(act[sec]>=0&&secW>.2&&memb(sec,k)===act[sec])?1:0;u.hl+=(tg-u.hl)*(1-Math.exp(-5*dt));var hl=u.hl;   /* the card being read lights its group */
     var lit=wsp?Math.max(0,Math.min(1,(u.g.position.z+14-cam.position.z)/6))*wsp:0;                             /* spine ignites as the camera approaches */
     var lb=wlab*(.45*Math.max(0,Math.sin(t*1.5*f-(k%6)*.9))+labBoost(k));                                      /* microplate scan + run pulse */
-    i.position.set(Math.cos(t*.3*f+p)*.1+u.dv.x*b*2.6,Math.sin(t*.45*f+p)*.14+Math.sin(t*1.1*f-k*.5)*.06*wA+u.dv.y*b*2.6+hl*.22,Math.sin(t*.25*f+p)*.1+u.dv.z*b*2.6);
-    i.rotation.y=t*.55*f*(wA+.12*(1-wA))+b*2.2*u.dir;
+    i.position.set(Math.cos(t*.3*f+p)*.1+u.dv.x*b*1.3,Math.sin(t*.45*f+p)*.14+Math.sin(t*1.1*f-k*.5)*.06*wA+u.dv.y*b*1.3+hl*.22,Math.sin(t*.25*f+p)*.1+u.dv.z*b*1.3);
+    i.rotation.y=t*.55*f*(wA+.12*(1-wA))+b*1.1*u.dir;
     i.rotation.x=(t*.35*f*u.dir+p)*(1-wA);
     i.scale.setScalar(intro.v*(1+Math.sin(t*.6*f+p)*.04+b*.25+hl*.14));
     var em=hl*.55+lit*.4+lb*.3;u.ma.emissiveIntensity=em;u.mb.emissiveIntensity=em;
@@ -589,15 +596,15 @@ document.addEventListener('visibilitychange',function(){document.hidden?clock.st
   sx+=(mx-sx)*(1-Math.exp(-3*dt));sy+=(my-sy)*(1-Math.exp(-3*dt));
   var w=sw.v,m=1-w*.75,gx=cs.px+sx*1.5*m+Math.sin(t*.1*f)*.35*m,gy=cs.py-sy*.9*m+Math.cos(t*.13*f)*.25*m,lx=cs.lx+sx*.5*m,ly=cs.ly-sy*.3*m;
   cam.position.set(gx+(sc2.px-gx)*w,gy+(sc2.py-gy)*w,cs.pz+(sc2.pz-cs.pz)*w+Math.pow(1-intro.v,2)*(RM?0:16));   /* opening dolly-in */               /* w blends the scroll camera with the selected-panel camera */
-  cam.up.set(Math.sin(cs.ro+bk*.035*f)*(1-w),Math.cos(cs.ro+bk*.035*f)*(1-w)+w,0);
+  cam.up.set(Math.sin(cs.ro+bk*.008*f)*(1-w),Math.cos(cs.ro+bk*.008*f)*(1-w)+w,0);
   tmp.set(lx+(sc2.lx-lx)*w,ly+(sc2.ly-ly)*w,cs.lz+(sc2.lz-cs.lz)*w);cam.lookAt(tmp);
-  var fv=cs.fov+(cam.aspect<1?(1-cam.aspect)*30:0);fv+=sv*1.1*(1-w)+trn*3+Math.pow(1-intro.v,2)*10;fv+=(sc2.fov-fv)*w;if(Math.abs(cam.fov-fv)>.01){cam.fov=fv;cam.updateProjectionMatrix()}
+  var fv=cs.fov+(cam.aspect<1?(1-cam.aspect)*30:0);fv+=sv*.4*(1-w)+trn*1+Math.pow(1-intro.v,2)*10;fv+=(sc2.fov-fv)*w;if(Math.abs(cam.fov-fv)>.01){cam.fov=fv;cam.updateProjectionMatrix()}
   /* --- atmosphere, lighting and orbits follow the current section --- */
   scene.background.setRGB(cs.r,cs.g,cs.b);scene.fog.color.setRGB(cs.r,cs.g,cs.b);scene.fog.density=cs.fog*(1-trn*.35);renderer.toneMappingExposure=cs.exp+trn*.12;
   bgG.position.set(cam.position.x-sx*5,cam.position.y+sy*3,cam.position.z);BG.forEach(function(q,i){q.material.opacity=cs.glow*(.8+.2*Math.sin(t*.15*f+i*2))});
-  dust.forEach(function(d,i){d.position.set(-sx*DP[i],sy*DP[i]*.6,0);d.rotation.y=t*DR[i]*f;d.material.size=DS[i]*(1+sv*.5+trn*.9)});
+  dust.forEach(function(d,i){d.position.set(-sx*DP[i],sy*DP[i]*.6,0);d.rotation.y=t*DR[i]*f;d.material.size=DS[i]*(1+sv*.2+trn*.3)});
   orbG.position.set(cs.lx,cs.ly,cs.lz);
-  OB.forEach(function(d){d.a+=dt*d.sp*f*(1+sv*1.4);var R=cs.orR*d.f;d.ring.scale.set(R,1,R);d.ring.material.opacity=cs.orO*(1-w);d.sat.position.set(Math.cos(d.a)*R,0,Math.sin(d.a)*R*.72);d.sat.rotation.y+=dt*.8*f;d.sat.scale.setScalar(Math.max(.3,Math.min(1,cs.orO*3)))});
+  OB.forEach(function(d){d.a+=dt*d.sp*f*(1+sv*.4);var R=cs.orR*d.f;d.ring.scale.set(R,1,R);d.ring.material.opacity=cs.orO*(1-w);d.sat.position.set(Math.cos(d.a)*R,0,Math.sin(d.a)*R*.72);d.sat.rotation.y+=dt*.8*f;d.sat.scale.setScalar(Math.max(.3,Math.min(1,cs.orO*3)))});
   key.intensity=cs.key;key.position.set(cs.px+cs.kx+Math.sin(pf*1.7)*2.5,16,cs.pz+10);key.target.position.set(cs.lx,-3,cs.lz);
   orL.intensity=cs.or+trn*1.6;orL.position.set(cs.lx+Math.cos(t*.4*f)*4,cs.ly+Math.sin(t*.3*f)*2.5,cs.lz+Math.sin(t*.4*f)*4+3);
   var Fq=PF[selI];orL.position.x+=(Fq[0]+1-orL.position.x)*w;orL.position.y+=(Fq[1]+2-orL.position.y)*w;orL.position.z+=(Fq[2]+5-orL.position.z)*w;orL.intensity+=w*1.5;   /* the orange key follows the selected panel */
@@ -605,7 +612,7 @@ document.addEventListener('visibilitychange',function(){document.hidden?clock.st
   floor.position.z=cs.pz-30;grid.position.z=Math.round((cs.pz-30)/2)*2;
   OB.forEach(function(d){d.sat.getWorldPosition(d.v);var p=d.pp;if(!d.ini){for(var i=0;i<TN;i++){p[i*3]=d.v.x;p[i*3+1]=d.v.y;p[i*3+2]=d.v.z}d.ini=1}
     p.copyWithin(3,0,(TN-1)*3);p[0]=d.v.x;p[1]=d.v.y;p[2]=d.v.z;d.tr.geometry.attributes.position.needsUpdate=true;d.tr.material.opacity=Math.min(1,cs.orO*3)*(1-w)});
-  var pv=pulse.v;pr.position.set(cs.lx,cs.ly,cs.lz);pr.quaternion.copy(cam.quaternion);pr.scale.setScalar(1+pv*16);pr.material.opacity=pv<1?(1-pv)*.4*(1-w):0;pr.visible=pr.material.opacity>.003;
+  var pv=pulse.v;pr.position.set(cs.lx,cs.ly,cs.lz);pr.quaternion.copy(cam.quaternion);pr.scale.setScalar(1+pv*16);pr.material.opacity=pv<1?(1-pv)*.12*(1-w):0;pr.visible=pr.material.opacity>.003;
   var skw=-bk*Math.min(1,sv)*6*f;if(Math.abs(skw-lsk)>.02){lsk=skw;document.documentElement.style.setProperty('--sk',skw.toFixed(2))}   /* headlines lean with scroll velocity */
   renderer.render(scene,cam);
 })();
