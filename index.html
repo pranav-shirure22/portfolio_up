@@ -331,8 +331,7 @@ if(!RM){
   gsap.fromTo('.tl-fill',{scaleY:0},{scaleY:1,ease:'none',scrollTrigger:{trigger:'.tl',start:'top 70%',end:'bottom 60%',scrub:true}});
   $$('.ai').forEach(function(a){ScrollTrigger.create({trigger:a,start:'top 68%',onEnter:function(){a.classList.add('on')},onLeaveBack:function(){a.classList.remove('on')}})});
   /* --- layered parallax: oversized outlined locus labels and floating panels move at different depths --- */
-  [['education',1,26],['skills',2,38],['lab',4,30],['experience',5,42],['credentials',6,32],['contact',7,24]].forEach(function(d){var sec=$('#'+d[0]),g=document.createElement('i');g.className='ghost';g.setAttribute('aria-hidden','true');g.textContent='chr'+d[1];sec.appendChild(g);
-    gsap.fromTo(g,{yPercent:d[2]*.35,x:30},{yPercent:-d[2]*.35,x:-30,ease:'none',scrollTrigger:{trigger:sec,start:'top bottom',end:'bottom top',scrub:true}})});
+  
   gsap.fromTo('.lh.sk',{z:-600,x:-60,opacity:0,transformPerspective:900},{z:0,x:0,opacity:1,ease:'power3.out',scrollTrigger:{trigger:'#projects',start:'top 70%',end:'top 20%',scrub:.7}});
   gsap.fromTo('.gb.sk',{y:70,opacity:0},{y:0,opacity:1,ease:'power3.out',scrollTrigger:{trigger:'#projects',start:'top 50%',end:'top 10%',scrub:.7}});
   gsap.fromTo('.sk',{z:0,opacity:1,transformPerspective:900},{z:-400,y:-40,opacity:0,ease:'power2.in',immediateRender:false,scrollTrigger:{trigger:'#projects',start:'bottom 85%',end:'bottom 45%',scrub:.7}});
